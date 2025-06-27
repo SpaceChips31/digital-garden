@@ -1,0 +1,106 @@
+/* Reset e base */
+body {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  background-color: #0e0e0e;
+  color: #ddd;
+}
+
+/* Link */
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+a:hover {
+  color: #66ffcc;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #111;
+  padding: 2em 1.5em 1.5em;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  z-index: 900;
+}
+.sidebar h2 {
+  color: #00ffff;
+  font-size: 1.2em;
+  margin-top: 3em;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* Contenuto */
+.content {
+  margin-left: 220px;
+  padding: 2em;
+  transition: margin-left 0.3s ease;
+}
+header h1 {
+  margin: 0 0 0 2.5em;
+  font-size: 2.2em;
+}
+.subtitle {
+  color: #888;
+  font-size: 1em;
+  margin-top: 0.5em;
+  margin-left: 7.5em;
+}
+.highlight {
+  background-color: #1a1a1a;
+  border-left: 4px solid #00ffff;
+  padding: 1em;
+  margin-top: 2em;
+  font-style: italic;
+}
+
+/* Hamburger button */
+.menu-icon {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  font-size: 1.8em;
+  background-color: #111;
+  padding: 0.4em 0.6em;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #00ffff;
+  z-index: 1001;
+}
+
+/* Sidebar compressa */
+#menu-toggle:checked ~ .sidebar {
+  transform: translateX(-220px);
+}
+#menu-toggle:checked ~ .content {
+  margin-left: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-220px);
+  }
+
+  #menu-toggle:checked ~ .sidebar {
+    transform: translateX(0);
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 4em 2em 2em;
+  }
+
+  #menu-toggle:checked ~ .content {
+    margin-left: 220px;
+  }
+}
