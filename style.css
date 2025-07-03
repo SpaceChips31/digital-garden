@@ -63,6 +63,30 @@ header h1 {
   font-style: italic;
 }
 
+/* Tutorial Sections */
+
+.tutorials-section {
+  margin-top: 4em;
+  padding: 1em 2em;
+  background-color: #1a1a1a;
+  border-left: 4px solid #00ffff;
+}
+
+.tutorials-section h2 {
+  margin-top: 0;
+  color: #00ffff;
+}
+
+.tutorials-list {
+  list-style: none;
+  padding-left: 1em;
+}
+
+.tutorials-list li {
+  margin: 0.5em 0;
+}
+
+
 /* Hamburger button */
 .menu-icon {
   position: fixed;
