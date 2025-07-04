@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SpaceChips' Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>spacechips@home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Iosevka&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="scanlines"></div>
+  <div class="hud-container">
+    <aside class="sidebar">
+      <h2>spacechips@home</h2>
+      <nav>
+        <a href="https://tutorials.spacechips.it">Tutorials</a>
+		<a href="https://me.spacechips.it">About Me</a>
+	  </nav>
+    </aside>
 
-  <!-- Sidebar checkbox inizialmente checked = compressa -->
-  <input type="checkbox" id="menu-toggle" checked hidden />
+    <main class="main">
+      <div class="hud-box">
+        <h1>&lt;/&gt; Welcome, Operator.</h1>
+        <p>Welcome to Spacechips' system. Select a module to continue.</p>
+        <div class="button-row">
+          <a href="https://tutorials.spacechips.it">Tutorials</a>
+          <a href="https://me.spacechips.it">About</a>
+        </div>
+      </div>
 
-  <!-- Bottone hamburger, FUORI dalla sidebar -->
-  <label for="menu-toggle" class="menu-icon">&#9776;</label>
-
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2>Navigation</h2>
-    <nav>
-	  <a href="https://tutorials.spacechips.it">Tutorials</a>
-      <a href="https://me.spacechips.it">About me</a>
-    </nav>
-  </aside>
-
-  <!-- Contenuto principale -->
-  <main class="content">
-    <header>
-      <h1>&lt;/&gt; Welcome!</h1>
-      <p class="subtitle">ideas, thoughts, notes, digital dreams.</p>
-    </header>
-
-	<section class="tutorials-section">
-	  <h2>Tutorials</h2>
-		<ul class="tutorials-list">
-			<li><a href="https://tutorials.spacechips.it/arch-installation">Installazione Arch Linux</a></li>
-		</ul>
-	</section>
-  </main>
-	
+      <div class="hud-box">
+        <h2>Tutorials</h2>
+        <ul>
+          <li><a href="https://tutorials.spacechips.it/arch-installation">Arch Linux - Installation Guide</a></li>
+        </ul>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
