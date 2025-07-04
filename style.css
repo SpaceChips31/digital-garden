@@ -18,7 +18,7 @@ body {
   background: repeating-linear-gradient(
     0deg,
     rgba(255, 255, 255, 0.03),
-    rgba(255, 255, 255, 0.03) 5px,
+    rgba(255, 255, 255, 0.03) 1px,
     transparent 5px,
     transparent 7px
   );
@@ -42,7 +42,7 @@ body {
   overflow: hidden;
   background: rgba(0, 255, 229, 0.05);
   border-right: 1px solid #00ffe5;
-  padding: 2em 1em;              
+  padding: 2em 1em;
   height: 100%;
   opacity: 1;
   transform: translateX(0);
@@ -50,7 +50,7 @@ body {
 }
 
 .sidebar.collapsed {
-  padding: 2em 1em; 
+  padding: 2em 1em;
   border: none;
   opacity: 0;
   transform: translateX(-10px);
@@ -106,14 +106,13 @@ body {
   color: #0a0a0a;
 }
 
-
 .glitch {
   position: relative;
-  display: inline-block;
-  white-space: nowrap;
+  display: inline-block; /* evita wrapping */
+  white-space: nowrap;   /* tutto su un’unica riga */
   overflow: visible;
   color: #00ffe5;
-  animation: glitch-flicker 5s infinite;
+  animation: glitch-flicker 3s infinite;
 }
 
 .glitch::before,
@@ -126,33 +125,33 @@ body {
   width: 100%;
   white-space: nowrap;
   overflow: visible;
-  color: #ff00ff;
   clip-path: inset(0 0 50% 0);
-  -webkit-clip-path: inset(0 0 50% 0);
-  animation: glitch-anim 5s infinite ease-in-out alternate-reverse;
+  animation: glitch-anim 3s infinite ease-in-out alternate-reverse;
+}
+
+.glitch::before {
+  color: #ff00ff;
 }
 
 .glitch::after {
   color: #00ffff;
   clip-path: inset(50% 0 0 0);
-  -webkit-clip-path: inset(50% 0 0 0);
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 
 @keyframes glitch-flicker {
   0%, 100% { opacity: 1; }
-  10% { opacity: 0.8; }
-  20% { opacity: 1; }
-  30% { opacity: 0.6; }
-  100% { opacity: 1; }
+  25% { opacity: 0.85; }
+  50% { opacity: 1; }
+  75% { opacity: 0.9; }
 }
 
 @keyframes glitch-anim {
-  0% { transform: translate(0, 0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(-3px, -1px); }
-  60% { transform: translate(3px, 1px); }
-  80% { transform: translate(-1px, -2px); }
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-1px, 1px); }
+  40%  { transform: translate(1px, -1px); }
+  60%  { transform: translate(-1px, -1px); }
+  80%  { transform: translate(1px, 1px); }
   100% { transform: translate(0, 0); }
 }
 
