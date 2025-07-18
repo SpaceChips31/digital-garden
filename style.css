@@ -4,6 +4,19 @@ html, body {
   height: 100%;
 }
 
+@font-face {
+  font-family: 'Iosevka';
+  src: url('/assets/fonts/iosevka/iosevka-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Iosevka';
+  src: url('/assets/fonts/iosevka/iosevka-bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   font-family: 'Iosevka', monospace;
   background-color: #0a0a0a;
